@@ -5,8 +5,11 @@
 **使用教程**
 >fork本项目
 >在secret中填写
->EMAIL: 邮箱\n
->PASSWORD: 密码\n
+>
+>EMAIL: 邮箱
+>
+>PASSWORD: 密码
+>
 >DOMAIN: 域名
 
 **加入企业微信应用推送，参数获取参照[企业微信帮助](https://note.youdao.com/ynoteshare1/index.html?id=351e08a72378206f9dd64d2281e9b83b&type=note)**
