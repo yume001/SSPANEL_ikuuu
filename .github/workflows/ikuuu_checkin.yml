@@ -29,9 +29,9 @@ jobs:
       run: |
         python3 checkin.py 
       env: 
-        EMAIL: ${{ secret.EMAIL }}
-        PASSWORD: ${{ secret.PASSWORD }}
-        DOMAIN: ${{ secret.DOMAIN }}
+        EMAIL: ${{ secrets.EMAIL }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        DOMAIN: ${{ secrets.DOMAIN }}
         QYWX_CORPID: ${{ secrets.QYWX_CORPID }}
         QYWX_AGENTID: ${{ secrets.QYWX_AGENTID }}
         QYWX_CORPSECRET: ${{ secrets.QYWX_CORPSECRET }}
