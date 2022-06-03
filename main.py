@@ -1,19 +1,20 @@
 # -*- coding: utf-8 -*-
 import json
 import requests
+import os
 
 #账户
-EMAIL = '2941325451@qq.com'
-PASSWORD = 'gpcsw555'
-DOMAIN = 'https://ikuuu.co'
+EMAIL = os.environ["EMAIL"]
+PASSWORD = os.environ["PASSWORD"]
+DOMAIN = os.environ["DOMAIN"]
 
 
 # 企业微信配置
-QYWX_CORPID = "ww332b9c0ef46cc2f0"
-QYWX_AGENTID = "1000003"
-QYWX_CORPSECRET = "P4I9rz3_U8B1LYwT94VXWc7W_5q4i-Cxhf9kR5DZqHY"
-QYWX_TOUSER = "gengpengcheng"
-QYWX_MEDIA_ID = ""
+QYWX_CORPID = os.environ["QYWX_CORPID"]
+QYWX_AGENTID = os.environ["QYWX_AGENTID"]
+QYWX_CORPSECRET = os.environ["QYWX_CORPSECRET"]
+QYWX_TOUSER = os.environ["QYWX_TOUSER"]
+QYWX_MEDIA_ID = os.environ["QYWX_MEDIA_ID"]
 
 class SSPANEL:
     name = "SSPANEL"
