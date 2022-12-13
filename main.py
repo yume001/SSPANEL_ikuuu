@@ -27,7 +27,7 @@ class SSPANEL:
         self.qywx_touser = QYWX_TOUSER
         self.qywx_media_id = QYWX_MEDIA_ID
 
-    def message2qywxapp(self, qywx_corpid, qywx_agentid, qywx_corpsecret, qywx_touser, qywx_media_id, content):
+    def message2qywxapp(self, qywx_corpid, qywx_agentid, qywx_corpsecret, qywx_touser, qywx_media_id, content, url):
         print("企业微信应用消息推送开始")
         res = requests.get(
             f"https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={qywx_corpid}&corpsecret={qywx_corpsecret}"
@@ -43,7 +43,7 @@ class SSPANEL:
                         {
                             "title": "ikuuu 签到通知",
                             "thumb_media_id": qywx_media_id,
-                            "content_source_url": "https://ikuuu.co/",
+                            "content_source_url": url,
                             "content": content.replace("\n", "<br>"),
                             "digest": content,
                         }
@@ -58,7 +58,7 @@ class SSPANEL:
                 "textcard": {
                     "title": "ikuuu 签到通知",
                     "description": content,
-                    "url": "https://ikuuu.co/",
+                    "url": url,
                 },
             }
         result = requests.post(url=f"https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token={token}",
@@ -105,7 +105,7 @@ class SSPANEL:
         ]
         msg = "\n".join([f"{one.get('name')}: {one.get('value')}" for one in msg])
         self.message2qywxapp(qywx_corpid=qywx_corpid, qywx_agentid=qywx_agentid, qywx_corpsecret=qywx_corpsecret,
-                             qywx_touser=qywx_touser, qywx_media_id=qywx_media_id, content=msg)
+                             qywx_touser=qywx_touser, qywx_media_id=qywx_media_id, content=msg, url=url)
         return msg
 
 
