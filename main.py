@@ -2,6 +2,9 @@
 import json
 import requests
 import os
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 
 #账户
 EMAIL = os.environ["EMAIL"]
