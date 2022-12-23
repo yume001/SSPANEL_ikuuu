@@ -1,5 +1,5 @@
 # ikuuu每日签到
->登录网站[ikuuu.co](https://ikuuu.co/auth/register?code=zSgi)
+>登录网站 ikuuu(域名自行寻找，以免失效)
 >
 >注册后，即可使用本项目进行每日的签到
 
